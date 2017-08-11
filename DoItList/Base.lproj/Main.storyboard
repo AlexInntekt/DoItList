@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,8 +50,56 @@
                     <view key="view" contentMode="scaleToFill" id="pkB-Ea-emg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in the task that needs to be acomplished" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hlK-Ul-3Eh">
+                                <rect key="frame" x="18.5" y="86.5" width="337.5" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="491-Vk-SbI">
+                                <rect key="frame" x="94" y="200.5" width="187.5" height="133"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveTaskButton:" destination="a7K-aY-bUW" eventType="touchUpInside" id="qY3-7e-RlA"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbH-9g-w8L">
+                                <rect key="frame" x="239" y="137.5" width="86.5" height="40"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it important?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uit-0Z-A2x">
+                                <rect key="frame" x="9.5" y="130" width="168.5" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QbH-9g-w8L" firstAttribute="width" secondItem="uit-0Z-A2x" secondAttribute="width" multiplier="0.5" id="0zN-bU-dnD"/>
+                            <constraint firstItem="hlK-Ul-3Eh" firstAttribute="centerX" secondItem="pkB-Ea-emg" secondAttribute="centerX" id="3pA-An-FjF"/>
+                            <constraint firstItem="hlK-Ul-3Eh" firstAttribute="width" secondItem="pkB-Ea-emg" secondAttribute="width" multiplier="0.9" id="5sS-NG-2Sx"/>
+                            <constraint firstItem="QbH-9g-w8L" firstAttribute="height" secondItem="uit-0Z-A2x" secondAttribute="height" id="6bP-5Y-jCU"/>
+                            <constraint firstItem="491-Vk-SbI" firstAttribute="width" secondItem="pkB-Ea-emg" secondAttribute="width" multiplier="0.5" id="9Vx-Zt-p8b"/>
+                            <constraint firstItem="uit-0Z-A2x" firstAttribute="centerX" secondItem="pkB-Ea-emg" secondAttribute="centerX" multiplier="0.5" id="Ddc-Hq-kH0"/>
+                            <constraint firstItem="491-Vk-SbI" firstAttribute="height" secondItem="pkB-Ea-emg" secondAttribute="height" multiplier="0.2" id="Mac-KJ-3F7"/>
+                            <constraint firstItem="QbH-9g-w8L" firstAttribute="centerX" secondItem="pkB-Ea-emg" secondAttribute="centerX" multiplier="1.5" id="PuN-Vv-VUn"/>
+                            <constraint firstItem="491-Vk-SbI" firstAttribute="centerX" secondItem="pkB-Ea-emg" secondAttribute="centerX" id="YCL-3e-s04"/>
+                            <constraint firstItem="hlK-Ul-3Eh" firstAttribute="height" secondItem="pkB-Ea-emg" secondAttribute="height" multiplier="0.06" id="YPs-oq-mvQ"/>
+                            <constraint firstItem="uit-0Z-A2x" firstAttribute="height" secondItem="hlK-Ul-3Eh" secondAttribute="height" id="dLx-T7-mkl"/>
+                            <constraint firstItem="hlK-Ul-3Eh" firstAttribute="centerY" secondItem="pkB-Ea-emg" secondAttribute="centerY" multiplier="0.32" id="dRb-RG-4eO"/>
+                            <constraint firstItem="uit-0Z-A2x" firstAttribute="centerY" secondItem="pkB-Ea-emg" secondAttribute="centerY" multiplier="0.45" id="kAX-5u-6SP"/>
+                            <constraint firstItem="uit-0Z-A2x" firstAttribute="width" secondItem="hlK-Ul-3Eh" secondAttribute="width" multiplier="0.5" id="nAw-qv-Gf9"/>
+                            <constraint firstItem="491-Vk-SbI" firstAttribute="centerY" secondItem="pkB-Ea-emg" secondAttribute="centerY" multiplier="0.8" id="u4K-My-v3U"/>
+                            <constraint firstItem="QbH-9g-w8L" firstAttribute="centerY" secondItem="uit-0Z-A2x" secondAttribute="centerY" multiplier="1.05" id="vUE-Qh-0hW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="isImportantSwitch" destination="QbH-9g-w8L" id="wya-B4-9JU"/>
+                        <outlet property="nameTextField" destination="hlK-Ul-3Eh" id="xfM-zt-gy0"/>
+                        <outlet property="saveTaskButton" destination="491-Vk-SbI" id="7kB-mk-3qm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sk-q8-9be" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

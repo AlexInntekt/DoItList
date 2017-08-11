@@ -13,10 +13,24 @@ import CoreData
 class ShowTasks: UIViewController
 {
 
+    var tasks: [CDTask] = []
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        fetch()
+        
+        if tasks.count == 0
+        {
+            print("\n This is empty!")
+        }
+
+        for task in tasks
+        {
+                print(task.isImportant, "  ", task.itsTask)
+        }
+        
+    
     }
 
 
@@ -25,6 +39,25 @@ class ShowTasks: UIViewController
     {
         performSegue(withIdentifier: "showTasksSegue", sender: nil)
     }
+    
+
+    func fetch()
+    {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+        do{
+        tasks = try context.fetch(CDTask.fetchRequest()) as! [CDTask]
+        print(">>> ", tasks)
+         }
+          catch{}
+    
+        
+        for instance in tasks
+          {
+             self.tasks.append(instance)
+          }
+    
+
+    }
 
 }
-

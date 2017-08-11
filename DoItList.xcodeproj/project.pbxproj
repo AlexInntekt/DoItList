@@ -14,6 +14,7 @@
 		B2D382E31F3E16FD00DBD7B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D382E21F3E16FD00DBD7B2 /* Assets.xcassets */; };
 		B2D382E61F3E16FD00DBD7B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D382E41F3E16FD00DBD7B2 /* LaunchScreen.storyboard */; };
 		B2D382EE1F3E17D400DBD7B2 /* createTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D382ED1F3E17D400DBD7B2 /* createTaskVC.swift */; };
+		B2D382F01F3E191C00DBD7B2 /* TaskClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D382EF1F3E191C00DBD7B2 /* TaskClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B2D382E51F3E16FD00DBD7B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2D382E71F3E16FD00DBD7B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2D382ED1F3E17D400DBD7B2 /* createTaskVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createTaskVC.swift; sourceTree = "<group>"; };
+		B2D382EF1F3E191C00DBD7B2 /* TaskClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				B2D382D81F3E16FD00DBD7B2 /* AppDelegate.swift */,
 				B2D382DA1F3E16FD00DBD7B2 /* ShowTasks.swift */,
 				B2D382ED1F3E17D400DBD7B2 /* createTaskVC.swift */,
+				B2D382EF1F3E191C00DBD7B2 /* TaskClass.swift */,
 				B2D382DC1F3E16FD00DBD7B2 /* Main.storyboard */,
 				B2D382E21F3E16FD00DBD7B2 /* Assets.xcassets */,
 				B2D382E41F3E16FD00DBD7B2 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 				B2D382EE1F3E17D400DBD7B2 /* createTaskVC.swift in Sources */,
 				B2D382D91F3E16FD00DBD7B2 /* AppDelegate.swift in Sources */,
 				B2D382E11F3E16FD00DBD7B2 /* DoItList.xcdatamodeld in Sources */,
+				B2D382F01F3E191C00DBD7B2 /* TaskClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
